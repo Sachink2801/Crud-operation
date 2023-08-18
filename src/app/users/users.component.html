@@ -6,7 +6,7 @@
       role="tabpanel"
       aria-labelledby="home-tab"
     >
-      <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
         <div class="row mt-2 d-flex">
           <div class="form-group col-md-6">
             <label for="formGroupExampleInput">Name</label>
@@ -56,8 +56,12 @@
           </div>
         </div>
         <div class="mt-2 d-flex btns">
-          <button type="submit" class="btn px-4 mx-4 btn btn-outline-primary">
-            Add
+          <button
+            type="submit"
+            class="btn px-4 mx-4 btn btn-outline-primary"
+            [disabled]="!userForm.valid"
+          >
+            {{ buttonText }}
           </button>
           <button type="reset" class="btn px-4 btn btn-outline-secondary">
             Reset
@@ -74,4 +78,4 @@
       User List
     </div>
   </div>
-</div>F
+</div>

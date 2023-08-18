@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "Email": "sachinkadam@gmail.com",
+      "Name": "Sachin kadam",
+      "Mobile": 8459234280,
+      "Age": 23,
+      "userid": 100
+    }
+  ]
+}

@@ -1,3 +1,14 @@
-.btns{
-    float: right;
+.btns {
+  float: right;
+}
+
+label::after {
+  content: "*";
+  color: red;
+  margin-left: 2px;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+  box-shadow: 0 0 13px rgb(139, 76, 76);
 }

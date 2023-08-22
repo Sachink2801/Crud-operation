@@ -7,8 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { TableListComponent } from './table-list/table-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
-  declarations: [AppComponent, UsersComponent, TableListComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

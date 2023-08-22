@@ -36,6 +36,7 @@ export class UsersComponent {
   }
 
   ngOnInit(): void {
+    debugger
     this.commonService.Data().subscribe((user: any) => {
       this.userForm.reset();
       if (user && user['type'] === 'edit') {

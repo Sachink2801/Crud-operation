@@ -36,7 +36,6 @@ export class UsersComponent {
   }
 
   ngOnInit(): void {
-    debugger
     this.commonService.Data().subscribe((user: any) => {
       this.userForm.reset();
       if (user && user['type'] === 'edit') {
@@ -64,6 +63,11 @@ export class UsersComponent {
 
   onSubmit() {
     let user = this.userForm.value;
+    if (user.Name == 'sachin') {
+      localStorage.setItem('isLogedin', 'true');
+    } else {
+      localStorage.setItem('isLogedin', 'false');
+    }
     if (this.buttonText.toLowerCase() === 'update') {
       let userAllData: any = localStorage.getItem('userData');
       let userArray: any[] = (userAllData = JSON.parse(userAllData));

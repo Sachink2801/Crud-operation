@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +8,21 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'crud-concept';
- 
 
+  showHeader = true;
   constructor(private router: Router) {
     localStorage.setItem('isLogedin', 'false');
+
+    router.events.subscribe((val) => {
+      if (val instanceof NavigationEnd) {
+        if (val.url == '/list' || val.url == '/') {
+          this.showHeader = true;
+        } else {
+          this.showHeader = false;
+        }
+      }
+    });
   }
 
-  ngOnInit(): void {
-  
-  }
+  ngOnInit(): void {}
 }

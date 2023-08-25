@@ -9,8 +9,8 @@ import { HederComponent } from '../heder/heder.component';
 @NgModule({
   declarations: [HomeComponent,HederComponent],
   imports: [
-    CommonModule
-  
+    CommonModule,
+    HomeModule
   ]
 
 })
